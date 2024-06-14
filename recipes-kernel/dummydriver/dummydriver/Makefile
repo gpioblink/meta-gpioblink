@@ -1,3 +1,5 @@
+# ref: https://developer.toradex.com/linux-bsp/os-development/build-yocto/custom-meta-layers-recipes-and-images-in-yocto-project-hello-world-examples/
+
 # Copyright (C) 2017, Chris Simmonds (chris@2net.co.uk)
 #
 # LINUXDIR should point to the kerenl you are running on the target.
@@ -14,13 +16,20 @@
 
 # make
 
-LINUXDIR ?= $(SDKTARGETSYSROOT)/usr/src/kernel
+# LINUXDIR ?= $(SDKTARGETSYSROOT)/usr/src/kernel
 
 obj-m := dummy.o
 
+SRC := $(shell pwd)
+
 all:
-	make -C $(LINUXDIR) M=$(shell pwd)
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
+
+modules_install:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
 
 clean:
-	make -C $(LINUXDIR) M=$(shell pwd) clean
+	rm -f *.o *~ core .depend .*.cmd *.ko *.mod.c
+	rm -f Module.markers Module.symvers modules.order
+	rm -rf .tmp_versions Modules.symvers
 
