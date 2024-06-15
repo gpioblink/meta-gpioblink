@@ -18,7 +18,7 @@
 
 # LINUXDIR ?= $(SDKTARGETSYSROOT)/usr/src/kernel
 
-obj-m := dummy.o
+obj-m := dummydriver.o
 
 SRC := $(shell pwd)
 

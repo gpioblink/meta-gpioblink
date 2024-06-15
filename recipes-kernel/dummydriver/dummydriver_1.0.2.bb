@@ -11,7 +11,7 @@ inherit module
 
 # hello-world.c from local file
 SRC_URI = " \
-    file://dummy.c \
+    file://dummydriver.c \
     file://Makefile \
 "
 
