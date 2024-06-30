@@ -1,4 +1,4 @@
-obj-m := driver.o
+obj-m := ghid_keyboard.o
 
 SRC := $(shell pwd)
 

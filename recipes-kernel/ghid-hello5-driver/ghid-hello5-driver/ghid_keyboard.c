@@ -51,3 +51,14 @@ static struct platform_device my_hid = {
       .dev.platform_data      = &my_hid_data,
 };
 
+static int ghid_keyboard_init(void) {
+        return platform_device_register(&my_hid);
+}
+
+static void ghid_keyboard_exit(void) {
+        platform_device_unregister(&my_hid);
+}
+
+module_init(ghid_keyboard_init);
+module_exit(ghid_keyboard_exit);
+MODULE_LICENSE("GPL");

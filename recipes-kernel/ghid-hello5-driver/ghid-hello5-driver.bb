@@ -5,8 +5,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0-or-lat
 inherit module
 
 SRC_URI = " \
-    file://driver.c \
-    file://keyboard.h \
+    file://ghid_keyboard.c \
     file://Makefile \
 "
 
