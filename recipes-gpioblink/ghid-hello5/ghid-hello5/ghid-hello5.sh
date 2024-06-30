@@ -50,18 +50,4 @@ ln -s /sys/kernel/config/usb_gadget/g1/functions/hid.usb0 /sys/kernel/config/usb
 ls /dev
 ls /sys/class/udc > /sys/kernel/config/usb_gadget/g1/UDC
 
-# start typing hello
-while : ;do
-  sleep 5
-  printf "\x00\x00\x0B\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x00\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x08\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x00\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x0F\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x00\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x0F\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x00\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x12\x00\x00\x00\x00\x00" > /dev/hidg0
-  printf "\x00\x00\x00\x00\x00\x00\x00\x00" > /dev/hidg0
-done
-
+/etc/init.d/ghid-hello5-loop.sh &
