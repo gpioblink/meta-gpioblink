@@ -3,6 +3,10 @@
 set -xeu
 
 mkfifo /tmp/karaoke-fifo
+rfkill unblock all
+
+# wait bluetooth to init
+sleep 10
 
 karaoke-demon &
 karaoke-remote &
