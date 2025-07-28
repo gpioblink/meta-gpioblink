@@ -3,8 +3,8 @@ DESCRIPTION = "ngrok is a globally distributed reverse proxy that secures, prote
 HOMEPAGE = "https://ngrok.com/"
 LICENSE = "CLOSED"
 
-SRC_URI = "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.tgz"
-SRC_URI[sha256sum] = "3516cb208051b41acf419e09a3ccf31e8d8fa5a76e9d175db11db9ad1ae22144"
+SRC_URI = "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz"
+SRC_URI[sha256sum] = "66c68eb5ee7da4fbc2bef3b2a98bc201edd29d8d1ce846c21c7888815183e766"
 
 # For ARM architecture (Raspberry Pi Zero)
 COMPATIBLE_MACHINE = "raspberrypi0.*"
