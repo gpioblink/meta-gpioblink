@@ -3,7 +3,7 @@
 # GitHubリポジトリ情報
 USER="gpioblink"           # GitHubのユーザー名または組織名
 REPO="karaoke-tools"     # リポジトリ名
-BRANCH="main"              # 取得するブランチ名 (デフォルトは "main")
+BRANCH="book-20250817"              # 取得するブランチ名 (デフォルトは "main")
 BBFILE="karaoke-demon_0.1.bb"
 
 # GitHub APIを使って最新のコミットを取得
